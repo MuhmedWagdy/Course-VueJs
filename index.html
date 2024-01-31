@@ -14,6 +14,14 @@
         <p>'Your age is {{age + 'Years'}} '</p>
         <p>Your skills is {{skills[1]}}</p>
         <p> Your Are {{is_subscribed ? 'welcome' : 'not approved'}}</p>
+        <p Your first test is {{completetest[0].testName}}></p>
+
+        <p> hello now is {{sayMyName()}}</p>
+
+
+        <p>{{date}}</p>
+
+        <butoon @click="showNewDate">Show DATE NOW</butoon>
 
 
 
@@ -30,9 +38,33 @@
                 data: {
                     name: 'mohamed wagdiX',
                     age: 44,
-                    skills: ['Html', 'css', 'Js'],
-                    is_subscribed: false
+                    date: 'Today',
+                    skills: ['Html', 'css', 'JsXe'],
+                    is_subscribed: false,
 
+                    completetest: [
+                        {
+                            testname: 'first_test',
+                            degree: '80%'
+                        },
+
+                        {
+
+                            testname: 'seconde_test',
+                            degree: '80%'
+
+                        },
+
+                    ],
+                },
+                methods: {
+                    sayMyName: function () {
+                        return this.skills[2]
+                    },
+
+                    showNewDate: function () {
+                        this.date = Date()
+                    }
                 }
 
 
