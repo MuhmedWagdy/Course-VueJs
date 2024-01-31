@@ -10,26 +10,35 @@
 <body>
 
     <div id="elzero-app">
-        <h2>Hello from {{name.length > 14 ? name : 'name have been short'}} Welcome Back</h2>
+        <h2>Hello from {{name.length > 10 ? name : 'name have been short'}} Welcome Back</h2>
+        <p>'Your age is {{age + 'Years'}} '</p>
+        <p>Your skills is {{skills[1]}}</p>
+        <p> Your Are {{is_subscribed ? 'welcome' : 'not approved'}}</p>
 
-        
+
+
+
         <!-- True Or False Pattern
     </div> -->
 
 
-    <script src="./js/vue.js"></script>
+        <script src="./js/vue.js"></script>
 
-    <script>
-        var vm = new Vue({
-            el: '#elzero-app',
-            data: {
-                name: 'mohamed wagdiX'
-            }
+        <script>
+            var vm = new Vue({
+                el: '#elzero-app',
+                data: {
+                    name: 'mohamed wagdiX',
+                    age: 44,
+                    skills: ['Html', 'css', 'Js'],
+                    is_subscribed: false
+
+                }
 
 
-        })
+            })
 
-    </script>
+        </script>
 
 </body>
 
