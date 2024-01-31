@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn VueJs</title>
+</head>
+
+<body>
+
+    <div id="elzero-app">
+        <h2>Hello from {{name.length > 14 ? name : 'name have been short'}} Welcome Back</h2>
+
+        
+        <!-- True Or False Pattern
+    </div> -->
+
+
+    <script src="./js/vue.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: '#elzero-app',
+            data: {
+                name: 'mohamed wagdiX'
+            }
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>
