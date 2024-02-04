@@ -9,8 +9,19 @@
 
 <body>
 
+
     <div id="elzero-app">
         <h2>Hello from {{name.length > 10 ? name : 'name have been short'}} Welcome Back</h2>
+        <ul>
+            <li v-for="skill in skills">
+                {{skill}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="test in completetest">
+                {{test.testname}}|{{test.degree}}
+            </li>
+        </ul>
         <p>'Your age is {{age + 'Years'}} '</p>
         <p>Your skills is {{skills[1]}}</p>
         <p> Your Are {{is_subscribed ? 'welcome' : 'not approved'}}</p>
@@ -23,13 +34,8 @@
 
         <butoon @click="showNewDate">Show DATE NOW</butoon>
 
-
-
-
         <!-- True Or False Pattern
     </div> -->
-
-
         <script src="./js/vue.js"></script>
 
         <script>
@@ -39,9 +45,8 @@
                     name: 'mohamed wagdiX',
                     age: 44,
                     date: 'Today',
-                    skills: ['Html', 'css', 'JsXe'],
+                    skills: ['Html', 'css', 'JsXe', 'Xml'],
                     is_subscribed: false,
-
                     completetest: [
                         {
                             testname: 'first_test',
@@ -49,7 +54,6 @@
                         },
 
                         {
-
                             testname: 'seconde_test',
                             degree: '80%'
 
