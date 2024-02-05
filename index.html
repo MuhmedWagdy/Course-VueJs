@@ -22,6 +22,7 @@
                 {{test.testname}}|{{test.degree}}
             </li>
         </ul>
+
         <p>'Your age is {{age + 'Years'}} '</p>
         <p>Your skills is {{skills[1]}}</p>
         <p> Your Are {{is_subscribed ? 'welcome' : 'not approved'}}</p>
@@ -31,6 +32,16 @@
 
 
         <p>{{date}}</p>
+        <p v-if="name"> welcome {{ name }}</p>
+        <p v-else>Name not found</p>
+
+
+
+
+
+
+
+
 
         <butoon @click="showNewDate">Show DATE NOW</butoon>
 
